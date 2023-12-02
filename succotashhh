@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+    <script>
+        const saldo = 0;
+        function sacar() {
+            const sacar = -document.getElementById("saldo restante").value;
+            const resultado = depositar - saldo;
+            const resultElement = document.getElementById("resultado").value;
+            resultElement.innerHTML = resultado;
+        }
+        function depositar() {
+            const depositar = +document.getElementById("saldo").value;
+            const resultado = depositar + saldo;
+            const resultElement = document.getElementById("resultado");
+            resultElement.innerHTML = resultado;
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h1>CALCULADORA</h1>
+
+    <table>
+        <tr>
+            <td colspan="2"><input type="number" id="saldo"></td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="depositar()">Depositar</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="sacar()">Sacar</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>resultado:</td>
+            <td><strong id="resultado">0</td>
+        </tr>
+    </table>
+</body>
